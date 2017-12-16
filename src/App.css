@@ -1,32 +1,68 @@
+/********************
+* GLOBAL
+********************/
+
 .App {
   text-align: center;
   font-family: Open Sans,sans-serif;
 }
 
-.Header {
+a {
+    text-decoration: none;
+}
+
+/********************
+* HEADERS
+********************/
+
+.header {
     background-color: #AB2A19;
     height: 100px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-}
-
-.Header > div {
-    width: 500px;
-    text-align: left;
-    align-self: center;
     color: #fff;
     font-size: 30px;
     font-weight: 700;
 }
 
-.Header img {
+.header img {
     position: relative;
     top: 13px;
     height: 50px;
     margin-right: 3px;
 }
+
+.MainHeader > div {
+    width: 500px;
+    text-align: left;
+    align-self: center;
+}
+
+.ShelfHeader > .headerLogo {
+    width: 25%;
+    position: relative;
+    bottom: 10px;
+
+}
+
+.ShelfHeader > .shelf {
+    background-color: #D34735;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+
+/********************
+* SHELVES
+********************/
 
 .Shelves-wrapper {
     display: flex;
@@ -51,3 +87,7 @@
     margin-left: 90px;
     font-size: 1.9rem;
 }
+
+/********************
+* BINS
+********************/

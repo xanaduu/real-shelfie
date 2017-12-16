@@ -14,6 +14,8 @@ massive(process.env.CONNECTION_STRING)
 .then(db => app.set('db', db))
 .catch(err => console.error(err));
 
+app.get('/api/shelf/:id', controller.getBins)
+
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => console.log('We up: ' + port));

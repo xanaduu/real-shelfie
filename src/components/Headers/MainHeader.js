@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from '../logo.png';
+import logo from './logo.png';
 
-const Header = () => {
+const MainHeader = () => {
     return (
-        <div className="Header">
+        <div className="MainHeader header">
             <div>
                 <img src={logo} alt="logo" /> SHELFIE
             </div>
@@ -11,4 +11,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default MainHeader;
