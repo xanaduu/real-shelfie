@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import BinHeader from './Headers/BinHeader';
+import axios from 'axios';
 
 class NewProduct extends Component {
     constructor(){
@@ -17,6 +18,20 @@ class NewProduct extends Component {
         this.setState({ price: val[0] === '$' ? val : '$' + val })
     }
 
+    saveProduct(){
+        let {product_name, price} = this.state;
+        let {id} = this.props.match.params;
+        let body = {
+            shelf: id[0],
+            bin: id[1],
+            product_name: product_name,
+            price: price.replace('$', '')
+        }
+
+        axios.post(`http://localhost:3001/api/bin/${id}`, body)
+        .then(response => console.log(response.data)).catch(err => console.log(err))
+    }
+
     render(){
         return (
             <div>
@@ -26,7 +41,7 @@ class NewProduct extends Component {
                     <input  onChange={e => this.updateName(e.target.value)}/>
                     <span>Price</span>
                     <input value={this.state.price} onChange={e => this.updatePrice(e.target.value)}/>
-                    <button>+ Add to Inventory</button>
+                    <button onClick={() => this.saveProduct()}>+ Add to Inventory</button>
                 </div>
             </div>
         )

@@ -90,18 +90,11 @@ a {
     background-color: #ED6B5A;
 }
 
-.headerShelf span {
-    position: relative;
-    top: 30px;
-    left: -68px;
+.BinHeader span {
+    float: left;
+    margin-left: 26px;
+    margin-top: 30px;
 }
-
-.headerBin span {
-    position: relative;
-    top: 30px;
-    left: -390px;
-}
-
 
 /********************
 * SHELVES

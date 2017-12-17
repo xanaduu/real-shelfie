@@ -1,4 +1,4 @@
-INSERT INTO shelfie
-(shelf, bin, product_name, price, image)
-VALUES
-($1, $2, $3, $4, $5);
+UPDATE shelfie
+SET product_name = $3,
+    price = $4
+WHERE shelf = $1 AND bin = $2;

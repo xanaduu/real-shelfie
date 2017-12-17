@@ -2,8 +2,8 @@ CREATE TABLE IF NOT EXISTS shelfie (
     id SERIAL NOT NULL,
     shelf VARCHAR(1) NOT NULL,
     bin INTEGER NOT NULL,
-    product_name TEXT NOT NULL,
-    price DECIMAL(10,2) NOT NULL,
+    product_name TEXT,
+    price DECIMAL(10,2),
     image TEXT
 );
 
