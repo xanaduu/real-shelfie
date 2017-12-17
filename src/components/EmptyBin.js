@@ -1,11 +1,14 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
-const EmptyBin = () => {
+const EmptyBin = (props) => {
 
     return (
-        <div className="bin EmptyBin">
-            <h2>+ Add inventory to bin</h2>
-        </div>
+        <Link to={`/create/${props.id}`}>
+            <div className="bin EmptyBin">
+                <h2>+ Add inventory to bin</h2>
+            </div>
+        </Link>
     )
 
 }

@@ -28,11 +28,12 @@ class ShelfView extends Component {
                     bin={bin.bin}
                     product={bin.product_name}
                     price={bin.price}
-                    image={bin.image} />
+                    image={bin.image}
+                    id={this.props.match.params.label + (i+1)}  />
             } else {
                 return <EmptyBin
                     key={i}
-                    bin={i + 1}/>
+                    id={this.props.match.params.label + (i+1)} />
             }
         })
         return (
