@@ -29,7 +29,10 @@ class NewProduct extends Component {
         }
 
         axios.post(`http://localhost:3001/api/bin/${id}`, body)
-        .then(response => console.log(response.data)).catch(err => console.log(err))
+        .then(response => {
+            console.log(response.data)
+            this.props.history.goBack();
+        }).catch(err => console.log(err))
     }
 
     render(){

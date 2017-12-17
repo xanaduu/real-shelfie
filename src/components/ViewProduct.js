@@ -68,6 +68,7 @@ class ViewProduct extends Component {
         axios.delete(`http://localhost:3001/api/bin/${this.props.match.params.id}`)
         .then(response => {
             console.log(response.data);
+            this.props.history.goBack();
         }).catch(err => console.log(err));
     }
 
