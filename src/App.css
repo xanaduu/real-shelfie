@@ -11,6 +11,15 @@ a {
     text-decoration: none;
 }
 
+.wrapper {
+    display: flex;
+}
+
+.gutter {
+    width: 20%;
+    min-height: 100vh;
+}
+
 /********************
 * HEADERS
 ********************/
@@ -41,8 +50,8 @@ a {
     align-self: center;
 }
 
-.ShelfHeader > .headerLogo {
-    width: 25%;
+.ShelfHeader .headerLogo {
+    width: 20vw;
     position: relative;
     bottom: 10px;
 
@@ -91,3 +100,33 @@ a {
 /********************
 * BINS
 ********************/
+
+.bin-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.bin {
+    background-color: #ED6B5A;
+    width: 500px;
+    height: 60px;
+    margin-top: 20px;
+    margin-left: 10px;
+    border-radius: 3px;
+    align-self: center;
+}
+
+.bin h2 {
+    font-family: 'Times New Roman',serif;
+    color: #fff;
+    text-align: center;
+    margin-top: 12px;
+    font-size: 1.9rem;
+    font-weight: 400;
+}
+
+.EmptyBin {
+    background-color: #FFB8AF;
+}

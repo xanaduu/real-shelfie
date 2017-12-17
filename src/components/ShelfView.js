@@ -17,7 +17,6 @@ class ShelfView extends Component {
         const shelfId = this.props.match.params.label;
         axios.get( `http://localhost:3001/api/shelf/${shelfId}` ).then( response => {
             this.setState({ bins: response.data });
-            console.log(response.data);
         }).catch(err => console.log(err));
     }
 
@@ -39,7 +38,12 @@ class ShelfView extends Component {
         return (
             <div>
                 <ShelfHeader label={this.props.match.params.label} />
-                {bins}
+                <div className="wrapper">
+                    <div className="gutter"></div>
+                    <div className="bin-wrapper">
+                        {bins}
+                    </div>
+                </div>
             </div>
         )
     }
