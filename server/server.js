@@ -15,6 +15,7 @@ massive(process.env.CONNECTION_STRING)
 .catch(err => console.error(err));
 
 app.get('/api/shelf/:id', controller.getBins)
+app.get('/api/bin/:id', controller.getProduct)
 app.post('/api/bin/:id', controller.newProduct)
 
 const port = process.env.PORT || 3000;

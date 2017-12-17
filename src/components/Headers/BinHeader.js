@@ -3,6 +3,7 @@ import logo from './logo.png';
 import {Link} from 'react-router-dom';
 
 const BinHeader = (props) => {
+    const addTo = props.addTo ? 'Add to' : '';
     return (
         <div className="BinHeader header">
             <Link to="/">
@@ -10,11 +11,11 @@ const BinHeader = (props) => {
                     <img src={logo} alt="logo" />
                 </div>
             </Link>
-            <div className="headerShelf">
+            <Link to={`/bins/${props.id[0]}`} className="headerShelf">
                 <span>Shelf {props.id[0]}</span>
-            </div>
+            </Link>
             <div className="headerBin">
-                <span>Add to Bin {props.id[1]}</span>
+                <span>{addTo} Bin {props.id[1]}</span>
             </div>
         </div>
     )

@@ -35,7 +35,7 @@ class NewProduct extends Component {
     render(){
         return (
             <div>
-                <BinHeader id={this.props.match.params.id} />
+                <BinHeader id={this.props.match.params.id} addTo={true} />
                 <div className="NewProduct">
                     <span>Name</span>
                     <input  onChange={e => this.updateName(e.target.value)}/>
