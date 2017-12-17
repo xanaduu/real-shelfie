@@ -261,4 +261,9 @@ a {
     padding: 10px 0;
     cursor: pointer;
     margin-right: 130px;
+    outline: none;
+}
+
+.ViewProductBtns .Save {
+    background-color: #40F99B;
 }

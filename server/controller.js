@@ -31,5 +31,17 @@ module.exports = {
             res.status(200).send(product)
         })
         .catch(() => res.status(500).send());
+    },
+
+    editProduct(req,res){
+        let {id} = req.params;
+        let {product_name, price} = req.body;
+        const db = req.app.get('db');
+        db.editProduct([id[0], id[1], product_name, price])
+        .then(product => {
+            console.log(product);
+            res.status(200).send(product)
+        })
+        .catch(() => res.status(500).send());
     }
 }
