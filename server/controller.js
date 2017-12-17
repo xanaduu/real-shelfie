@@ -43,5 +43,16 @@ module.exports = {
             res.status(200).send(product)
         })
         .catch(() => res.status(500).send());
+    },
+
+    deleteProduct(req,res){
+        let {id} = req.params;
+        const db = req.app.get('db');
+        console.log(db);
+        db.deleteProduct([id[0], id[1]])
+        .then(() => {
+            res.status(200).send('Product Deleted')
+        })
+        .catch(() => res.status(500).send());
     }
 }

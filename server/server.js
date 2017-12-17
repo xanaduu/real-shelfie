@@ -18,6 +18,7 @@ app.get('/api/shelf/:id', controller.getBins);
 app.get('/api/bin/:id', controller.getProduct);
 app.post('/api/bin/:id', controller.newProduct);
 app.put('/api/bin/:id', controller.editProduct);
+app.delete('/api/bin/:id', controller.deleteProduct);
 
 const port = process.env.PORT || 3000;
 
