@@ -15,7 +15,7 @@ class ShelfView extends Component {
     componentDidMount(){
         //Get bins for this shelf
         const shelfId = this.props.match.params.label;
-        axios.get( `http://localhost:3001/api/shelf/${shelfId}` ).then( response => {
+        axios.get( `/api/shelf/${shelfId}` ).then( response => {
             this.setState({ bins: response.data });
         }).catch(err => console.log(err));
     }

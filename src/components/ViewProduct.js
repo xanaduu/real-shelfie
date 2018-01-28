@@ -15,7 +15,7 @@ class ViewProduct extends Component {
     }
 
     componentDidMount(){
-        axios.get(`http://localhost:3001/api/bin/${this.props.match.params.id}`)
+        axios.get(`/api/bin/${this.props.match.params.id}`)
         .then(response => {
             console.log(response.data);
             let {id, product_name, price} = response.data[0]

@@ -9,6 +9,8 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(cors());
+app.use( express.static( `${__dirname}/../build` ) );
+
 
 massive(process.env.CONNECTION_STRING)
 .then(db => app.set('db', db))
@@ -19,6 +21,11 @@ app.get('/api/bin/:id', controller.getProduct);
 app.post('/api/bin/:id', controller.newProduct);
 app.put('/api/bin/:id', controller.editProduct);
 app.delete('/api/bin/:id', controller.deleteProduct);
+
+const path = require('path')
+app.get('*', (req, res)=>{
+  res.sendFile(path.join(__dirname, '../build/index.html'));
+})
 
 const port = process.env.PORT || 3000;
 

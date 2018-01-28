@@ -28,7 +28,7 @@ class NewProduct extends Component {
             price: price.replace('$', '')
         }
 
-        axios.post(`http://localhost:3001/api/bin/${id}`, body)
+        axios.post(`/api/bin/${id}`, body)
         .then(response => {
             console.log(response.data)
             this.props.history.goBack();
